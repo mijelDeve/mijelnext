@@ -1,7 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { PERSONAL_INFO, STRENGTHS } from "@/lib/constants";
 
@@ -14,15 +14,22 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto"
+          className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl font-bold mb-8 text-center">Sobre mí</h2>
           <div className="flex flex-col md:flex-row gap-8 items-start">
-            <Avatar className="w-32 h-32 border-2 border-primary/20">
-              <AvatarFallback className="text-3xl bg-gradient-to-br from-primary to-violet-500 text-white">
-                {PERSONAL_INFO.initials}
-              </AvatarFallback>
-            </Avatar>
+            <div className="relative w-40 h-40 flex-shrink-0">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-violet-600 rounded-2xl rotate-6 opacity-30" />
+              <div className="absolute inset-0 bg-gradient-to-bl from-violet-600 to-primary rounded-2xl -rotate-6 opacity-30" />
+              <div className="relative w-full h-full rounded-2xl overflow-hidden border">
+                <Image
+                  src="/images/profile.jpg"
+                  alt={PERSONAL_INFO.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
             <div className="flex-1">
               <p className="text-lg text-muted-foreground mb-6">
                 Soy un desarrollador full-stack apasionado por crear

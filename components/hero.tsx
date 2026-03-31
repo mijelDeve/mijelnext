@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -86,22 +86,62 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex-1 flex justify-center lg:justify-end"
           >
-            <div className="relative w-72 h-72 lg:w-96 lg:h-96">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary to-violet-600 rounded-3xl rotate-6 opacity-20" />
-              <div className="absolute inset-0 bg-gradient-to-bl from-violet-600 to-primary rounded-3xl -rotate-6 opacity-20" />
-              <div className="relative w-full h-full bg-card border rounded-3xl flex items-center justify-center overflow-hidden">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-violet-500 flex items-center justify-center">
-                    <span className="text-4xl font-bold text-white">
-                      {PERSONAL_INFO.initials}
-                    </span>
+            <div className="relative w-full max-w-xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-violet-600 rounded-xl rotate-3 opacity-20" />
+              <div className="absolute inset-0 bg-gradient-to-bl from-violet-600 to-primary rounded-xl -rotate-3 opacity-20" />
+              <div className="relative bg-black rounded-xl overflow-hidden shadow-2xl border border-zinc-800">
+                <div className="bg-zinc-900 px-4 py-2 flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                  <div className="w-3 h-3 rounded-full bg-green-500" />
+                  <span className="ml-2 text-xs text-zinc-500">terminal</span>
+                </div>
+                <div className="p-4 font-mono text-xs md:text-sm text-zinc-300 space-y-1">
+                  <div>
+                    <span className="text-green-400">➜</span>
+                    <span className="text-blue-400 ml-2">~</span>
+                    <span className="text-zinc-400 ml-1">neofetch</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    Full-Stack Developer
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-2">
-                    Next.js + Supabase
-                  </p>
+                  <div className="text-zinc-400 ml-4">
+                    <span className="text-yellow-400">████████████████</span> usuario@desktop
+                  </div>
+                  <div className="text-zinc-400 ml-4">
+                    OS: <span className="text-purple-400">Next.js + Supabase</span>
+                  </div>
+                  <div className="text-zinc-400 ml-4">
+                    Rama: <span className="text-cyan-400">Full-Stack Developer</span>
+                  </div>
+                  <div className="text-zinc-400 ml-4">
+                    Café: <span className="text-green-400">Infinito</span>
+                  </div>
+                  
+                  <div className="mt-3">
+                    <span className="text-green-400">➜</span>
+                    <span className="text-blue-400 ml-2">~</span>
+                    <span className="text-zinc-400 ml-1">cat historia.txt</span>
+                  </div>
+                  <div className="text-zinc-400 ml-4">Estudio desarrollo web desde 2020.</div>
+                  <div className="text-zinc-400 ml-4">Me apasiona crear soluciones elegantes.</div>
+                  
+                  <div className="mt-3">
+                    <span className="text-green-400">➜</span>
+                    <span className="text-blue-400 ml-2">~</span>
+                    <span className="text-zinc-400 ml-1">ping skills</span>
+                  </div>
+                  <div className="text-green-400 ml-4">✓ React • TypeScript • Node.js • PostgreSQL</div>
+                  
+                  <div className="mt-3">
+                    <span className="text-green-400">➜</span>
+                    <span className="text-blue-400 ml-2">~</span>
+                    <span className="text-zinc-400 ml-1">echo $MOTIVACION</span>
+                  </div>
+                  <div className="text-yellow-300 ml-4">{`"Construir cosas que funcionan y solving problemas"`}</div>
+                  
+                  <div className="mt-3">
+                    <span className="text-green-400">➜</span>
+                    <span className="text-blue-400 ml-2">~</span>
+                    <span className="text-zinc-400 ml-1 animate-pulse">_</span>
+                  </div>
                 </div>
               </div>
             </div>

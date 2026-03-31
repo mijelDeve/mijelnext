@@ -9,6 +9,7 @@ export const PERSONAL_INFO = {
   github: "https://github.com/mijelDeve",
   linkedin: "https://www.linkedin.com/in/mijeldev/",
   available: true,
+  photo: "/images/profile.jpg",
 };
 
 export const NAV_LINKS = [

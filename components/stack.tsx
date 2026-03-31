@@ -1,28 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Code2,
-  Database,
-  Container,
-  Cloud,
-  GitBranch,
-  Terminal,
-  Box,
-  Palette,
-} from "lucide-react";
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiSupabase, SiPostgresql, SiDocker, SiGithub, SiReact, SiNodedotjs } from "react-icons/si";
 import { Card, CardContent } from "@/components/ui/card";
 import { STACK } from "@/lib/constants";
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  "Next.js": Code2,
-  "TypeScript": Code2,
-  "Tailwind": Palette,
-  "Supabase": Database,
-  "PostgreSQL": Database,
-  "Docker": Container,
-  "AWS": Cloud,
-  "Git": GitBranch,
+const iconMap: Record<string, { icon: React.ComponentType<{ size?: number; className?: string }>; color: string }> = {
+  "Next.js": { icon: SiNextdotjs, color: "#000000" },
+  "TypeScript": { icon: SiTypescript, color: "#3178C6" },
+  "Tailwind": { icon: SiTailwindcss, color: "#06B6D4" },
+  "Supabase": { icon: SiSupabase, color: "#3ECF8E" },
+  "PostgreSQL": { icon: SiPostgresql, color: "#336791" },
+  "Docker": { icon: SiDocker, color: "#2496ED" },
+  "AWS": { icon: SiGithub, color: "#FF9900" }, // Fallback - AWS no disponible en Si
+  "Git": { icon: SiGithub, color: "#F05032" },
+  "React": { icon: SiReact, color: "#61DAFB" },
+  "Node.js": { icon: SiNodedotjs, color: "#339933" },
 };
 
 export function Stack() {
@@ -42,7 +35,7 @@ export function Stack() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {STACK.map((tech, index) => {
-              const Icon = iconMap[tech.name] || Terminal;
+              const { icon: Icon, color } = iconMap[tech.name] || { icon: SiNextdotjs, color: "#888888" };
               return (
                 <motion.div
                   key={tech.name}
@@ -53,8 +46,13 @@ export function Stack() {
                 >
                   <Card className="hover:border-primary/50 transition-colors">
                     <CardContent className="flex items-center gap-4 p-4">
-                      <div className="p-2 rounded-lg bg-primary/10">
-                        <Icon className="w-6 h-6 text-primary" />
+                      <div 
+                        className="p-2 rounded-lg"
+                        style={{ backgroundColor: `${color}15` }}
+                      >
+                        <span style={{ color }}>
+                          <Icon size={24} className="transition-transform hover:scale-110" />
+                        </span>
                       </div>
                       <span className="font-medium">{tech.name}</span>
                     </CardContent>
