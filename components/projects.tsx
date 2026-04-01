@@ -9,10 +9,8 @@ import { Badge } from "@/components/ui/badge";
 import { PROJECTS } from "@/lib/constants";
 
 const projectImages: Record<string, { gradient: string; icon: string }> = {
-  saas: { gradient: "from-blue-600 to-violet-600", icon: "SaaS" },
-  dashboard: { gradient: "from-emerald-600 to-teal-600", icon: "📊" },
-  ecommerce: { gradient: "from-orange-600 to-amber-600", icon: "🛒" },
-  landing: { gradient: "from-rose-600 to-pink-600", icon: "🌐" },
+  flujos: { gradient: "from-violet-600 to-purple-600", icon: "🔮" },
+  pichangas: { gradient: "from-green-600 to-emerald-600", icon: "⚽" },
 };
 
 export function Projects() {
@@ -75,16 +73,22 @@ export function Projects() {
                           Ver demo
                         </a>
                       </Button>
-                      <Button variant="ghost" size="sm" asChild>
-                        <a
-                          href={project.codeUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="mr-2 h-4 w-4" />
-                          Código
-                        </a>
-                      </Button>
+                      {project.codeUrl ? (
+                        <Button variant="ghost" size="sm" asChild>
+                          <a
+                            href={project.codeUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="mr-2 h-4 w-4" />
+                            Código
+                          </a>
+                        </Button>
+                      ) : (
+                        <span className="text-xs text-muted-foreground px-2">
+                          🔒 Código privado
+                        </span>
+                      )}
                     </CardFooter>
                   </Card>
                 </motion.div>

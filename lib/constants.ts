@@ -43,44 +43,24 @@ export const STACK = [
 
 export const PROJECTS = [
   {
-    id: 1,
-    title: "SaaS MVP",
+    id: 6,
+    title: "Creador de Flujos con IA",
     description:
-      "Plataforma SaaS multi-tenant con autenticación, pagos y dashboard analítico.",
-    tags: ["Next.js 15", "Supabase", "Stripe", "Tailwind"],
-    demoUrl: "#",
-    codeUrl: "#",
-    image: "saas",
+      "Herramienta que transforma descripciones de procesos en diagramas de flujo visuales. Solo ingresa el texto de tu proceso y la IA lo genera automáticamente.",
+    tags: ["Next.js", "Supabase", "AI", "Tailwind CSS"],
+    demoUrl: "https://creador-flujos-nextjs.vercel.app/",
+    codeUrl: undefined,
+    image: "flujos",
   },
   {
-    id: 2,
-    title: "Dashboard Admin",
+    id: 5,
+    title: "Contabilizador de Pichangas",
     description:
-      "Panel de administración con gráficos, tablas dinámicas y gestión de usuarios.",
-    tags: ["Next.js", "Supabase", "Recharts", "shadcn/ui"],
-    demoUrl: "#",
-    codeUrl: "#",
-    image: "dashboard",
-  },
-  {
-    id: 3,
-    title: "E-commerce",
-    description:
-      "Tienda online con catálogo, carrito, checkout y panel de administración.",
-    tags: ["Next.js", "Supabase", "Tailwind", "Lucide"],
-    demoUrl: "#",
-    codeUrl: "#",
-    image: "ecommerce",
-  },
-  {
-    id: 4,
-    title: "Landing Page + Auth",
-    description:
-      "Landing page profesional con sistema de autenticación y base de datos.",
-    tags: ["Next.js", "Supabase", "Framer Motion"],
-    demoUrl: "#",
-    codeUrl: "#",
-    image: "landing",
+      "App para organizar partidos de fútbol con amigos. Registra goles, maneja equipos y muestra un ranking general de los mejores jugadores.",
+    tags: ["Next.js", "Supabase", "Tailwind CSS"],
+    demoUrl: "https://contabilidad-pichangas.vercel.app/",
+    codeUrl: "https://github.com/mijelDeve",
+    image: "pichangas",
   },
 ];
 

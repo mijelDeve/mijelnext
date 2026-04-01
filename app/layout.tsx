@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description:
     "Desarrollador full-stack especializado en Next.js y Supabase. Construyo aplicaciones modernas, rápidas y escalables.",
   keywords: ["Next.js", "Supabase", "Freelance", "Desarrollador", "Full-Stack"],
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
