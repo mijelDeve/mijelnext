@@ -14,6 +14,7 @@ export const PERSONAL_INFO = {
 
 export const NAV_LINKS = [
   { href: "#inicio", label: "Inicio" },
+  { href: "#servicios", label: "Servicios" },
   { href: "#proyectos", label: "Proyectos" },
   { href: "#stack", label: "Stack" },
   { href: "#contacto", label: "Contacto" },
@@ -90,7 +91,48 @@ export const TESTIMONIALS = [
 
 export const FOOTER_LINKS = [
   { href: "#inicio", label: "Inicio" },
+  { href: "#servicios", label: "Servicios" },
   { href: "#proyectos", label: "Proyectos" },
   { href: "#stack", label: "Stack" },
   { href: "#contacto", label: "Contacto" },
+];
+
+export const SERVICES = [
+  {
+    id: 1,
+    title: "Aplicaciones a Medida",
+    description: "Desarrollo aplicaciones web completas con Next.js, Supabase y NestJS. Soluciones escalables y personalizadas para tus necesidades específicas.",
+    icon: "🛠️",
+    features: ["Next.js + Supabase + NestJS", "APIs RESTful y GraphQL", "Base de datos PostgreSQL", "Autenticación y autorizaciones"],
+  },
+  {
+    id: 2,
+    title: "Landing Pages",
+    description: "Diseño y desarrollo de landing pages modernas, optimizadas para conversión y con excelente rendimiento.",
+    icon: "🎯",
+    features: ["Next.js 15 (App Router)", "Diseño responsive", "SEO optimizado", "Carga rápida"],
+  },
+  {
+    id: 3,
+    title: "Ecommerce a Medida",
+    description: "Tiendas online personalizadas con pasarela de pago integrada. Gestión de productos, inventario y pedidos.",
+    icon: "🛒",
+    features: ["Pasarela de pago", "Gestión de inventario", "Panel de administración", "Diseño personalizado"],
+  },
+  {
+    id: 4,
+    title: "SaaS",
+    description: "Construcción de productos SaaS con modelo de membresía. Del MVP a producción.",
+    icon: "🚀",
+    features: ["Membresías y suscripciones", "Panel de usuario", "Integraciones API", "Escalabilidad"],
+  },
+];
+
+export const SAAS_PRODUCTS = [
+  {
+    id: 1,
+    name: "Flowly",
+    description: "Herramienta que transforma descripciones de procesos en diagramas de flujo visuales con IA.",
+    demoUrl: "https://creador-flujos-nextjs.vercel.app/",
+  },
 ];
